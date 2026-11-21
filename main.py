@@ -75,6 +75,13 @@ def ejecutar_simulacion() -> None:
     # Operación 14 (Inválida con Encadenamiento): Reserva con cliente inexistente (LookupError -> OperacionNoPermitidaError)
     sistema.crear_reserva("RES-99", "CLI-INEXISTENTE", "SRV-01", duracion=2)
 
+    # Operación 15 (Válida - Sobrecarga de recálculo): Aplicar descuento dinámico del 15%    
+    sistema.crear_reserva("RES-05", "CLI-01", "SRV-03", duracion=2, tasa_iva=0.19, descuento=0.0)     
+    sistema.gestionar_estado_reserva("RES-05", "RECALCULAR", nuevo_descuento=0.15)    
+
+    # Operación 16 (Válida - Cancelación y restauración de stock): Libera la Workstation SRV-02    
+    sistema.gestionar_estado_reserva("RES-02", "CANCELAR")
+
     # --- RESUMEN FINAL EN MEMORIA ---
     print("\n================ RESUMEN FINAL DEL SISTEMA (EN MEMORIA) ================")
     print(f"Total Clientes válidos:  {len(sistema.clientes)}")

@@ -1,34 +1,40 @@
-2026-11-20 20:05:51 | INFO     | === INICIO DE SESIÓN EN SISTEMA SOFTWARE FJ ===
-2026-11-20 20:05:51 | INFO     | Cliente registrado: Cliente [CLI-01] Laura Gómez | Doc: 1144098765 | Email: laura.gomez@correo.com
-2026-11-20 20:05:51 | INFO     | Auditoría cerrada para intento de registro de cliente.
-2026-11-20 20:05:51 | INFO     | Cliente registrado: Cliente [CLI-02] Carlos Mendoza | Doc: 1005894321 | Email: cmendoza@empresa.co
-2026-11-20 20:05:51 | INFO     | Auditoría cerrada para intento de registro de cliente.
-2026-11-20 20:05:51 | ERROR    | Instanciación de cliente inválido -> [DatosInvalidosError]: Documento inválido ('123'): debe ser numérico y tener al menos 6 dígitos.
-2026-11-20 20:05:51 | ERROR    | Instanciación de servicio inválido -> [DatosInvalidosError]: Documento inválido ('123'): debe ser numérico y tener al menos 6 dígitos.
-2026-11-20 20:05:51 | ERROR    | Registro de cliente fallido -> [DatosInvalidosError]: Cliente duplicado: ID 'CLI-04' o documento '1144098765' ya registrado.
-2026-11-20 20:05:51 | INFO     | Auditoría cerrada para intento de registro de cliente.
-2026-11-20 20:05:51 | INFO     | Servicio registrado: [SRV-01] Sala Ejecutiva Norte ($80,000.00/h) - Disponible
-2026-11-20 20:05:51 | INFO     | Auditoría cerrada para intento de registro de servicio.
-2026-11-20 20:05:51 | INFO     | Servicio registrado: [SRV-02] Workstation Dell Precision ($45,000.00/h) - Disponible
-2026-11-20 20:05:51 | INFO     | Auditoría cerrada para intento de registro de servicio.
-2026-11-20 20:05:51 | INFO     | Servicio registrado: [SRV-03] Auditoría Ciberseguridad ($150,000.00/h) - Disponible
-2026-11-20 20:05:51 | INFO     | Auditoría cerrada para intento de registro de servicio.
-2026-11-20 20:05:51 | ERROR    | Instanciación de servicio inválido -> [CalculoInconsistenteError]: La tarifa base debe ser mayor a 0 (recibido: -50000.0).
-2026-11-20 20:05:51 | INFO     | Reserva creada: Reserva [RES-01] | Estado: PENDIENTE | Cliente: Laura Gómez | Servicio: Sala Ejecutiva Norte (3h) | Total: $273,105.00
-2026-11-20 20:05:51 | INFO     | Ciclo transaccional finalizado para reserva 'RES-01'.
-2026-11-20 20:05:51 | INFO     | Acción 'CONFIRMAR' exitosa -> Reserva [RES-01] | Estado: CONFIRMADA | Cliente: Laura Gómez | Servicio: Sala Ejecutiva Norte (3h) | Total: $273,105.00
-2026-11-20 20:05:51 | INFO     | Fin de gestión sobre reserva 'RES-01'.
-2026-11-20 20:05:51 | INFO     | Acción 'PROCESAR' exitosa -> Reserva [RES-01] | Estado: PROCESADA | Cliente: Laura Gómez | Servicio: Sala Ejecutiva Norte (3h) | Total: $273,105.00
-2026-11-20 20:05:51 | INFO     | Fin de gestión sobre reserva 'RES-01'.
-2026-11-20 20:05:51 | ERROR    | Gestión de reserva 'RES-01' (CANCELAR) -> [OperacionNoPermitidaError]: Operación denegada: la reserva 'RES-01' ya se encuentra 'PROCESADA' y no puede cancelarse.
-2026-11-20 20:05:51 | INFO     | Fin de gestión sobre reserva 'RES-01'.
-2026-11-20 20:05:51 | INFO     | Reserva creada: Reserva [RES-02] | Estado: PENDIENTE | Cliente: Carlos Mendoza | Servicio: Workstation Dell Precision (4h) | Total: $235,620.00
-2026-11-20 20:05:51 | INFO     | Ciclo transaccional finalizado para reserva 'RES-02'.
-2026-11-20 20:05:51 | INFO     | Acción 'CONFIRMAR' exitosa -> Reserva [RES-02] | Estado: CONFIRMADA | Cliente: Carlos Mendoza | Servicio: Workstation Dell Precision (4h) | Total: $235,620.00
-2026-11-20 20:05:51 | INFO     | Fin de gestión sobre reserva 'RES-02'.
-2026-11-20 20:05:51 | ERROR    | Creación de reserva 'RES-03' -> [ServicioNoDisponibleError]: El servicio 'Workstation Dell Precision' (SRV-02) no se encuentra disponible.
-2026-11-20 20:05:51 | INFO     | Ciclo transaccional finalizado para reserva 'RES-03'.
-2026-11-20 20:05:51 | ERROR    | Creación de reserva 'RES-04' -> [DatosInvalidosError]: La asesoría 'Auditoría Ciberseguridad' requiere un mínimo de 2 horas (solicitadas: 1).
-2026-11-20 20:05:51 | INFO     | Ciclo transaccional finalizado para reserva 'RES-04'.
-2026-11-20 20:05:51 | ERROR    | Creación de reserva 'RES-99' -> [OperacionNoPermitidaError]: Imposible crear reserva 'RES-99': entidad referenciada no encontrada. | Causa original -> [LookupError]: No existe ningún cliente con ID 'CLI-INEXISTENTE'.
-2026-11-20 20:05:51 | INFO     | Ciclo transaccional finalizado para reserva 'RES-99'.
+2026-11-20 20:18:04 | INFO     | === INICIO DE SESIÓN EN SISTEMA SOFTWARE FJ ===
+2026-11-20 20:18:04 | INFO     | Cliente registrado: Cliente [CLI-01] Laura Gómez | Doc: 1144098765 | Email: laura.gomez@correo.com
+2026-11-20 20:18:04 | INFO     | Auditoría cerrada para intento de registro de cliente.
+2026-11-20 20:18:04 | INFO     | Cliente registrado: Cliente [CLI-02] Carlos Mendoza | Doc: 1005894321 | Email: cmendoza@empresa.co
+2026-11-20 20:18:04 | INFO     | Auditoría cerrada para intento de registro de cliente.
+2026-11-20 20:18:04 | ERROR    | Instanciación de cliente inválido -> [DatosInvalidosError]: Documento inválido ('123'): debe ser numérico y tener al menos 6 dígitos.
+2026-11-20 20:18:04 | ERROR    | Instanciación de servicio inválido -> [DatosInvalidosError]: Documento inválido ('123'): debe ser numérico y tener al menos 6 dígitos.
+2026-11-20 20:18:04 | ERROR    | Registro de cliente fallido -> [DatosInvalidosError]: Cliente duplicado: ID 'CLI-04' o documento '1144098765' ya registrado.
+2026-11-20 20:18:04 | INFO     | Auditoría cerrada para intento de registro de cliente.
+2026-11-20 20:18:04 | INFO     | Servicio registrado: [SRV-01] Sala Ejecutiva Norte ($80,000.00/h) - Disponible
+2026-11-20 20:18:04 | INFO     | Auditoría cerrada para intento de registro de servicio.
+2026-11-20 20:18:04 | INFO     | Servicio registrado: [SRV-02] Workstation Dell Precision ($45,000.00/h) - Disponible
+2026-11-20 20:18:04 | INFO     | Auditoría cerrada para intento de registro de servicio.
+2026-11-20 20:18:04 | INFO     | Servicio registrado: [SRV-03] Auditoría Ciberseguridad ($150,000.00/h) - Disponible
+2026-11-20 20:18:04 | INFO     | Auditoría cerrada para intento de registro de servicio.
+2026-11-20 20:18:04 | ERROR    | Instanciación de servicio inválido -> [CalculoInconsistenteError]: La tarifa base debe ser mayor a 0 (recibido: -50000.0).
+2026-11-20 20:18:04 | INFO     | Reserva creada: Reserva [RES-01] | Estado: PENDIENTE | Cliente: Laura Gómez | Servicio: Sala Ejecutiva Norte (3h) | Total: $273,105.00
+2026-11-20 20:18:04 | INFO     | Ciclo transaccional finalizado para reserva 'RES-01'.
+2026-11-20 20:18:04 | INFO     | Acción 'CONFIRMAR' exitosa -> Reserva [RES-01] | Estado: CONFIRMADA | Cliente: Laura Gómez | Servicio: Sala Ejecutiva Norte (3h) | Total: $273,105.00
+2026-11-20 20:18:04 | INFO     | Fin de gestión sobre reserva 'RES-01'.
+2026-11-20 20:18:04 | INFO     | Acción 'PROCESAR' exitosa -> Reserva [RES-01] | Estado: PROCESADA | Cliente: Laura Gómez | Servicio: Sala Ejecutiva Norte (3h) | Total: $273,105.00
+2026-11-20 20:18:04 | INFO     | Fin de gestión sobre reserva 'RES-01'.
+2026-11-20 20:18:04 | ERROR    | Gestión de reserva 'RES-01' (CANCELAR) -> [OperacionNoPermitidaError]: Operación denegada: la reserva 'RES-01' ya se encuentra 'PROCESADA' y no puede cancelarse.
+2026-11-20 20:18:04 | INFO     | Fin de gestión sobre reserva 'RES-01'.
+2026-11-20 20:18:04 | INFO     | Reserva creada: Reserva [RES-02] | Estado: PENDIENTE | Cliente: Carlos Mendoza | Servicio: Workstation Dell Precision (4h) | Total: $235,620.00
+2026-11-20 20:18:04 | INFO     | Ciclo transaccional finalizado para reserva 'RES-02'.
+2026-11-20 20:18:04 | INFO     | Acción 'CONFIRMAR' exitosa -> Reserva [RES-02] | Estado: CONFIRMADA | Cliente: Carlos Mendoza | Servicio: Workstation Dell Precision (4h) | Total: $235,620.00
+2026-11-20 20:18:04 | INFO     | Fin de gestión sobre reserva 'RES-02'.
+2026-11-20 20:18:04 | ERROR    | Creación de reserva 'RES-03' -> [ServicioNoDisponibleError]: El servicio 'Workstation Dell Precision' (SRV-02) no se encuentra disponible.
+2026-11-20 20:18:04 | INFO     | Ciclo transaccional finalizado para reserva 'RES-03'.
+2026-11-20 20:18:04 | ERROR    | Creación de reserva 'RES-04' -> [DatosInvalidosError]: La asesoría 'Auditoría Ciberseguridad' requiere un mínimo de 2 horas (solicitadas: 1).
+2026-11-20 20:18:04 | INFO     | Ciclo transaccional finalizado para reserva 'RES-04'.
+2026-11-20 20:18:04 | ERROR    | Creación de reserva 'RES-99' -> [OperacionNoPermitidaError]: Imposible crear reserva 'RES-99': entidad referenciada no encontrada. | Causa original -> [LookupError]: No existe ningún cliente con ID 'CLI-INEXISTENTE'.
+2026-11-20 20:18:04 | INFO     | Ciclo transaccional finalizado para reserva 'RES-99'.
+2026-11-20 20:18:04 | INFO     | Reserva creada: Reserva [RES-05] | Estado: PENDIENTE | Cliente: Laura Gómez | Servicio: Auditoría Ciberseguridad (2h) | Total: $357,000.00
+2026-11-20 20:18:04 | INFO     | Ciclo transaccional finalizado para reserva 'RES-05'.
+2026-11-20 20:18:04 | INFO     | Acción 'RECALCULAR' exitosa -> Reserva [RES-05] | Estado: PENDIENTE | Cliente: Laura Gómez | Servicio: Auditoría Ciberseguridad (2h) | Total: $303,450.00
+2026-11-20 20:18:04 | INFO     | Fin de gestión sobre reserva 'RES-05'.
+2026-11-20 20:18:04 | INFO     | Acción 'CANCELAR' exitosa -> Reserva [RES-02] | Estado: CANCELADA | Cliente: Carlos Mendoza | Servicio: Workstation Dell Precision (4h) | Total: $235,620.00
+2026-11-20 20:18:04 | INFO     | Fin de gestión sobre reserva 'RES-02'.
