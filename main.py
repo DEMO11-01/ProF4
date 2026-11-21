@@ -23,8 +23,8 @@ def ejecutar_simulacion() -> None:
         c_invalido = Cliente("CLI-03", "123", "Ana", "correo_invalido.com", "300")
         sistema.registrar_cliente(c_invalido)
     except SoftwareFJError as err:
-        sistema._SistemaSoftwareFJ__auditor.registrar_error("Instanciación de cliente inválido", err)
-        print(f"[ERROR CAPTURADO EN MAIN] {err}")
+        sistema.auditar_error_externo("Instanciación de cliente inválido", err)
+        sistema.auditar_error_externo("Instanciación de servicio inválido", err)
 
     # Operación 4 (Inválida): Cliente duplicado (documento repetido de Laura Gómez)
     c_duplicado = Cliente("CLI-04", "1144098765", "Laura Duplicada", "otra@correo.com", "3112223344")
