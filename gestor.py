@@ -32,6 +32,10 @@ class SistemaSoftwareFJ:
     def reservas(self) -> list[Reserva]:
         return list(self.__reservas)
 
+    def auditar_error_externo(self, contexto: str, error: Exception) -> None:
+        """Registra fallos ocurridos durante la instanciación previa al ingreso al gestor."""
+        self.__auditor.registrar_error(contexto, error)
+
     def _buscar_cliente(self, id_cliente: str) -> Cliente:
         for cliente in self.__clientes:
             if cliente.id == id_cliente:
