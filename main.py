@@ -82,6 +82,12 @@ def ejecutar_simulacion() -> None:
     # Operación 16 (Válida - Cancelación y restauración de stock): Libera la Workstation SRV-02    
     sistema.gestionar_estado_reserva("RES-02", "CANCELAR")
 
+    # Operación 17 (Inválida - Validación QA de Excepción en Recálculo): Descuento fuera de rango (> 100%)
+    try:
+        sistema.gestionar_estado_reserva("RES-05", "RECALCULAR", nuevo_descuento=1.5)
+    except Exception as e:
+        print(f"[QA - Excepción capturada correctamente]: {type(e).__name__} -> {e}")
+
     # --- RESUMEN FINAL EN MEMORIA ---
     print("\n================ RESUMEN FINAL DEL SISTEMA (EN MEMORIA) ================")
     print(f"Total Clientes válidos:  {len(sistema.clientes)}")
