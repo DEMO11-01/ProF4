@@ -1,3 +1,8 @@
+"""
+Módulo de Excepciones y Reglas de Negocio - Proyecto Fase 4.
+Documentación y revisión QA: Validación de jerarquía de errores personalizados,
+control de flujo transaccional y manejo de excepciones en tiempo de ejecución.
+"""
 class SoftwareFJError(Exception):
     """Excepción base para todos los errores controlados de Software FJ."""
     pass
